@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #2563eb;
+  color: white;
+}
+
+.header a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: white;
+}
+
+/* SEARCH */
+.search {
+  margin-top: 20px;
+}
+
+.search input {
+  padding: 10px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.search button {
+  padding: 10px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* JOB CARD */
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.job-card h3 {
+  margin: 0;
+}
+
+.job-card button {
+  margin-top: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}

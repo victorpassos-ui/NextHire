@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #eef2f7;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 100px 20px 40px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.sub {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #111;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.search input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 14px;
+}
+
+.search button {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.search button:hover {
+  transform: scale(1.05);
+}
+
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: 0.25s;
+  border: 1px solid #f1f1f1;
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.job-card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.job-card p {
+  margin: 6px 0;
+  color: #6b7280;
+}
+
+.job-card button {
+  margin-top: 12px;
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.job-card button:hover {
+  background: #059669;
+}
+
+.badge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
