@@ -1,9 +1,10 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { jobs } from "../data/jobs";
 import { useState } from "react";
 
 export default function Apply() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const job = jobs.find(j => j.id === Number(id));
 
@@ -109,11 +110,12 @@ Empresa: ${job.empresa}
 
       </form>
 
-      <Link to="/">
-        <button style={{ marginTop: "20px" }}>
-          Voltar
-        </button>
-      </Link>
+      <button
+        style={{ marginTop: "20px" }}
+        onClick={() => navigate(-1)}
+      >
+        Voltar
+      </button>
     </div>
   );
 }

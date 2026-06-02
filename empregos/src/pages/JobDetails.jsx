@@ -1,8 +1,10 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { jobs } from "../data/jobs";
 
 export default function JobDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const job = jobs.find(j => j.id === Number(id));
 
   if (!job) {
@@ -12,16 +14,24 @@ export default function JobDetails() {
   return (
     <div className="container">
       <h1>{job.titulo}</h1>
-      <p className="sub">{job.empresa} • {job.cidade}</p>
+      <p className="sub">
+        {job.empresa} • {job.cidade}
+      </p>
 
       <div className="job-card">
-        <p><strong>💰 Salário:</strong> {job.salario}</p>
+        <p>
+          <strong>💰 Salário:</strong> {job.salario}
+        </p>
 
-        <p><strong>📄 Descrição:</strong><br />
+        <p>
+          <strong>📄 Descrição:</strong>
+          <br />
           {job.descricao}
         </p>
 
-        <p><strong>✅ Requisitos:</strong><br />
+        <p>
+          <strong>✅ Requisitos:</strong>
+          <br />
           {job.requisitos}
         </p>
 
@@ -32,9 +42,12 @@ export default function JobDetails() {
         </Link>
       </div>
 
-      <Link to="/">
-        <button style={{ marginTop: "20px" }}>Voltar</button>
-      </Link>
+      <button
+        style={{ marginTop: "20px" }}
+        onClick={() => navigate(-1)}
+      >
+        Voltar
+      </button>
     </div>
   );
 }
