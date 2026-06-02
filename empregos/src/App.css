@@ -1,146 +1,376 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #eef2f7;
+  background: #f4f7fb;
+  color: #1f2937;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   padding: 100px 20px 40px;
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 40px;
   margin-bottom: 10px;
 }
 
 .sub {
   color: #6b7280;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
+
+/* HEADER */
 
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   background: white;
-  padding: 15px 20px;
+  padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-  z-index: 10;
   box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .header h2 {
   margin: 0;
-  font-size: 20px;
-  white-space: nowrap;
+  color: #2563eb;
+  font-size: 24px;
 }
 
 .nav-links {
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 25px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #6b7280;
-  font-weight: 500;
+  color: #374151;
+  font-weight: 600;
+  transition: .3s;
 }
 
 .nav-links a:hover {
-  color: #111;
+  color: #2563eb;
 }
+
+/* HERO */
+
+.hero-banner {
+  background:
+    linear-gradient(
+      rgba(15,23,42,0.75),
+      rgba(15,23,42,0.75)
+    ),
+    url("/images/fundo.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  border-radius: 30px;
+  padding: 80px 60px;
+  margin-bottom: 50px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.hero-banner h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero-banner p {
+  font-size: 18px;
+  max-width: 700px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.95);
+}
+
+/* BUSCA */
 
 .search {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 12px;
+  margin-bottom: 30px;
 }
 
 .search input {
   flex: 1;
-  padding: 14px;
-  border-radius: 12px;
+  padding: 15px;
   border: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  font-size: 14px;
+  border-radius: 14px;
+  font-size: 15px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 .search button {
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  background: #2563eb;
   color: white;
   border: none;
-  padding: 14px 20px;
-  border-radius: 12px;
+  padding: 15px 25px;
+  border-radius: 14px;
   cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s;
+  font-weight: 600;
+  transition: .3s;
 }
 
 .search button:hover {
-  transform: scale(1.05);
+  background: #1d4ed8;
+  transform: translateY(-2px);
 }
+
+/* CARDS */
 
 .job-card {
   background: white;
-  padding: 20px;
-  border-radius: 16px;
-  margin-top: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  transition: 0.25s;
-  border: 1px solid #f1f1f1;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: .3s;
 }
 
 .job-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .job-card h3 {
-  margin: 0;
-  font-size: 18px;
+  margin-top: 0;
+  color: #111827;
+  font-size: 22px;
 }
 
 .job-card p {
-  margin: 6px 0;
   color: #6b7280;
 }
 
 .job-card button {
-  margin-top: 12px;
+  margin-top: 15px;
   background: #10b981;
   color: white;
   border: none;
-  padding: 8px 14px;
-  border-radius: 10px;
+  padding: 12px 18px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.3s;
+  font-weight: 600;
+  transition: .3s;
 }
 
 .job-card button:hover {
   background: #059669;
 }
 
+/* BADGE */
+
 .badge {
   display: inline-block;
-  background: #e0e7ff;
-  color: #3730a3;
-  padding: 4px 10px;
-  border-radius: 8px;
-  font-size: 12px;
-  margin-top: 8px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
-form input {
-  display: block;
+/* FORMULÁRIOS */
+
+form input,
+form textarea {
   width: 100%;
-  margin-bottom: 10px;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+form textarea {
+  resize: none;
+}
+
+form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+form button:hover {
+  background: #1d4ed8;
+}
+
+/* APRESENTAÇÃO */
+
+.about-section {
+  background: white;
+  border-radius: 25px;
+  padding: 40px;
+  margin-top: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.about-section h2 {
+  color: #2563eb;
+  margin-top: 0;
+}
+
+.about-section p {
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .hero-banner {
+    padding: 50px 30px;
+  }
+
+  .hero-banner h1 {
+    font-size: 34px;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+
+  .search button {
+    width: 100%;
+  }
+
+  .container {
+    padding-top: 140px;
+  }
+}
+
+.home-page {
+  max-width: 1400px;
+  margin: auto;
+  padding: 120px 20px 40px;
+}
+
+.hero-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-right {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 15px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.secondary-btn {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.secondary-btn:hover {
+  background: #f3f4f6;
+}
+
+.hero-box {
+  background: rgba(255,255,255,0.95);
+  color: #1f2937;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.hero-box h2 {
+  color: #111827;
+  margin-top: 0;
+}
+
+.hero-box p {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.about-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.about-card h2 {
+  color: #2563eb;
+  margin-top: 0;
+}
+
+.about-card p {
+  color: #4b5563;
+  line-height: 1.8;
 }
